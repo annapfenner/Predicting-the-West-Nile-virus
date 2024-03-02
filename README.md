@@ -1,10 +1,18 @@
-# capstone-project-2
-
-![cover_photo](./Capstone Project2/Images and Plots/west_nile_virus_mosquito.jpeg)
-
 # Predicting West Nile Virus in Chicago
 
-## 1. Data
+## Table of Contents
+
+1. [The Data](#data)
+2. [Data Wrangling](#data-wrangling)
+3. [EDA](#EDA)
+4. [Feature Engineering](#feature-engineering)
+5. [Modeling](#modeling)
+6. [Best Model](#best-model)
+7. [Future Improvements](#future-improvements)
+8. [Contributing](#contributing)
+9. [Contact](#contact)
+
+### 1. The Data
 This Kaggle datasets comes from the comprehensive program the City of Chicago and Chicago Department of Public Health 
 have to track the West Nile virus from late spring through fall. 
 
@@ -14,7 +22,7 @@ The datasets used were:
 
 > * [Kaggle Dataset](https://www.kaggle.com/c/predict-west-nile-virus/)
 
-## 2. Data Wrangling
+### 2. Data Wrangling
 [Data Wrangling Notebook](https://github.com/annapfenner/capstone-project-2/blob/main/Jupyter%20Notebooks/Capstone%20Project%202%20-%20Data%20Wrangling.ipynb)
 
 **The training dataset:**
@@ -32,7 +40,7 @@ The datasets used were:
 
 Merged the two datasets on date and station column. 
 
-## 3. EDA
+### 3. EDA
 [EDA Notebook](https://github.com/annapfenner/capstone-project-2/blob/main/Jupyter%20Notebooks/Project%202%20-%20EDA.ipynb)
 
 During the exploratory data analysis step, different relationships were explored in temperature, precipitation, and humidity across the weeks to identify potential patterns connected with the presence or absence of the West Nile virus.
@@ -42,7 +50,7 @@ During the exploratory data analysis step, different relationships were explored
 2. Discernible pattern emerged when plotting a 14-day average temperature shift across the weeks. Showed a pattern for the rise of mosquitoes (with and without the West Nile Virus) when temperatures ranged between 23 to 26 degrees Celsius.
 3. In the training data, 120,520 observations did show the presense of the West Nile Virus whereas 14,519 observations showed the presense of the West Nile Virus. 
 
-## 4. Feature Engineering
+### 4. Feature Engineering
 [Feature Engineering Notebook](https://github.com/annapfenner/capstone-project-2/blob/main/Jupyter%20Notebooks/Project%202%20-%20EDA.ipynb)
 
 Mosquitoes thrive in drought-like weather. This makes the water in the standing water become richer with organic matter which contains mosquitoes eggs. Mosquitoes are active at night. 
@@ -53,7 +61,7 @@ Mosquitoes thrive in drought-like weather. This makes the water in the standing 
 3. Shifted three columns (average temperature in Celsius, precipitation, and relative humidity) by 7, 14, 21 days to see how previous weather affected the number of mosquitoes with the West Nile virus. 
 4. Two columns were added based upon how much daylight and nighttime there were for each day. 
 
-## 5. Modeling
+### 5. Modeling
 [Pre-processing, Training, and Modeling Notebook](https://github.com/annapfenner/capstone-project-2/blob/main/Jupyter%20Notebooks/Project%202-%20Pre-processing%2C%20Training%20%26%20Modeling.ipynb)
 
 **Maching Learning Algorithms used:** XGBoost Classification and Random Forest Classification. 
@@ -64,7 +72,7 @@ Mosquitoes thrive in drought-like weather. This makes the water in the standing 
 
 **Analysis:** SHAP package used to extract best features from the best model.  
 
-## 6 Best Model
+### 6 Best Model
 [Best Model found in Pre-processing, Training, and Modeling Notebook](https://github.com/annapfenner/capstone-project-2/blob/main/Jupyter%20Notebooks/Project%202-%20Pre-processing%2C%20Training%20%26%20Modeling.ipynb)
 
 **Best Model:** The XGBoostClassifier with HyperOpt for hyperparameter tuning.
@@ -73,9 +81,17 @@ Mosquitoes thrive in drought-like weather. This makes the water in the standing 
 
 **SHAP Analysis:**  The top features for the predicting the model were number of mosquitoes, sunrise, amount of daylight time, sunset, week, year and average temperature.
 
-## 7. Future Improvements
+### 7. Future Improvements
 Future work could include the following:
 1. Remove the "number of mosquitoes" feature as could significantly streamline the West Nile Virus prediction process for the City of Chicago and Department of Public Health. 
 2. Manipulate the existing dataset features by shifting them over various days, such as sunrise, sunset times, and daylight duration. 
 3. Include additional data from other years. 
+
+### Contributing
+
+Contributions to this repository are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. 
+
+### Contact
+
+If you have any questions or suggestions regarding this repository, feel free to reach out to me at [annapfenner@gmail.com](mailto:annapfenner@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/annapfenner/).
 
